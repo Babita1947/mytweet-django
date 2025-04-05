@@ -9,6 +9,7 @@ from django.contrib.auth import login
 # def index(request):
 #     return render(request, 'index.html')
 
+@login_required
 def tweet_list(request):
     tweets = Tweet.objects.all().order_by('-created_at')
     print("tweeijt ",tweets)
